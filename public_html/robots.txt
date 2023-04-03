@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /js/*
+Disallow: /css/*
+Disallow: /slim/*
+Disallow: /admin/*
+
+Sitemap: https://www.sharebay.org/sitemap.xml

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    id="svg1"
+    viewBox="0 0 437.5 437.5"
+    sodipodi:version="0.34"
+    version="1.0"
+    y="0"
+    x="0"
+    sodipodi:docname="/usr/share/icons/Lemon/scalable/mimetypes/spreadsheet.svg"
+    sodipodi:docbase="/usr/share/icons/Lemon/scalable/mimetypes/"
+  >
+  <sodipodi:namedview
+      id="base"
+  />
+  <path
+      id="path623"
+      sodipodi:nodetypes="ccccc"
+      style="fill-rule:evenodd;fill:#040565;fill-opacity:.3977"
+      d="m101.51 420.19l-19.5-380.31 326.88 1.021c-0.02 20.061 5.69 359.95 5.89 376.59-103.06-20.5-303.92 2.56-313.27 2.7z"
+  />
+  <path
+      id="path583"
+      sodipodi:nodetypes="ccccs"
+      style="fill-rule:evenodd;stroke:#99bf99;stroke-width:15.892;fill:#ffffeb"
+      d="m54.372 394.65c-5.846-126.11-7.764-324.9-17.538-378.34 106.34 15.401 257.76-13.086 324.92-0.943-20.03 58.673 3.73 359.95 3.93 376.58-103.07-20.49-310.88 12.04-311.31 2.7z"
+  />
+  <path
+      id="path622"
+      sodipodi:nodetypes="cccccc"
+      style="fill-rule:evenodd;fill:#b2d385;fill-opacity:.4327"
+      d="m75.978 367.16c-15.266-68.12-14.048-323.15-13.579-332.15 100.66 18.276 242.64-3.342 260.57-2.983l-0.51 24.588c-0.01 20.06-73.65 143.7-73.45 160.34-103.07-20.5-163.69 150.06-173.03 150.2z"
+  />
+  <path
+      id="path627"
+      style="fill-rule:evenodd;fill:#3a8b39"
+      d="m79.064 128.25v36.57h112.54v-36.57h-112.54z"
+  />
+  <path
+      id="path633"
+      style="fill-rule:evenodd;fill:#ffff00"
+      d="m80.471 184.52v30.95h111.13v-30.95h-111.13z"
+  />
+  <path
+      id="path626"
+      style="fill-rule:evenodd;fill:#e1cf80"
+      d="m80.471 223.91v36.57h91.439v-36.57h-91.439z"
+  />
+  <path
+      id="path628"
+      style="fill-rule:evenodd;fill:#cbcbe5"
+      d="m215.52 128.25v35.17h106.91v-35.17h-106.91z"
+  />
+  <path
+      id="path625"
+      style="fill-rule:evenodd;fill:#d8d2e1"
+      d="m215.52 183.11v66.12h102.69v-66.12h-102.69z"
+  />
+  <path
+      id="path632"
+      style="fill-rule:evenodd;fill:#eb7e58"
+      d="m79.064 76.197v32.353h241.97v-32.353h-241.97z"
+  />
+  <path
+      id="path636"
+      style="fill-rule:evenodd;fill:#80b26b"
+      d="m316.68 328.89v-47.31h-239.53l-0.004 47.31h239.53z"
+  />
+  <path
+      id="path630"
+      style="fill-rule:evenodd;fill:#f14300"
+      d="m419.21 322.85c0 30.69-56.05 55.57-125.2 55.57s-125.2-24.88-125.2-55.57c-4.22-84.15-0.22-64.01 125.2-55.57 131.04-16.88 129.42-18.73 125.2 55.57z"
+  />
+  <path
+      id="path631"
+      style="fill-rule:evenodd;fill:#ffbd4d"
+      d="m419.21 269.39c0 30.69-56.05 55.57-125.2 55.57s-125.2-24.88-125.2-55.57 56.05-55.56 125.2-55.56 125.2 24.87 125.2 55.56z"
+  />
+  <path
+      id="path635"
+      style="fill-rule:evenodd;stroke:#000000;fill:#ffff56"
+      d="m292.6 261.66l75.97 53.45v53.46c-12.66 1.41-19.71 9.8-73.15 9.85-43.69 0.03-56.27-5.63-64.71-9.85v-52.05l61.89-54.86z"
+  />
+  <path
+      id="path637"
+      style="fill-rule:evenodd;stroke:#000000;fill:#b2ff56"
+      d="m229.31 315.85c34.63 13.28 78.57 14.82 138.96-0.36-0.34 12.72 0.94 35.49 0.9 51.55-16 7.25-42.06 11.35-68.78 11.38-43.68 0.03-61.24-5.63-69.68-9.85l-1.4-52.72z"
+  />
+  <metadata
+    >
+    <rdf:RDF
+      >
+      <cc:Work
+        >
+        <dc:format
+          >image/svg+xml</dc:format
+        >
+        <dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        />
+        <cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        />
+        <dc:publisher
+          >
+          <cc:Agent
+              rdf:about="http://openclipart.org/"
+            >
+            <dc:title
+              >Openclipart</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:publisher
+        >
+        <dc:title
+          >spreadsheet</dc:title
+        >
+        <dc:date
+          >2011-01-21T16:59:19</dc:date
+        >
+        <dc:description
+          >Originally uploaded by Jose Hevia for OCAL 0.18</dc:description
+        >
+        <dc:source
+          >https://openclipart.org/detail/109129/spreadsheet-by-anonymous-109129</dc:source
+        >
+        <dc:creator
+          >
+          <cc:Agent
+            >
+            <dc:title
+              >Anonymous</dc:title
+            >
+          </cc:Agent
+          >
+        </dc:creator
+        >
+        <dc:subject
+          >
+          <rdf:Bag
+            >
+            <rdf:li
+              >fix</rdf:li
+            >
+            <rdf:li
+              >keyword</rdf:li
+            >
+            <rdf:li
+              >librarians</rdf:li
+            >
+            <rdf:li
+              >tag</rdf:li
+            >
+          </rdf:Bag
+          >
+        </dc:subject
+        >
+      </cc:Work
+      >
+      <cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        >
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        />
+        <cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        />
+      </cc:License
+      >
+    </rdf:RDF
+    >
+  </metadata
+  >
+</svg
+>

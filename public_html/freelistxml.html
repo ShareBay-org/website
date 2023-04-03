@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="theme-color" content="#008080"/>
+<meta name="mobile-web-app-capable" content="yes">
+<title>FreeList XML</title>
+<meta name="keywords" content="XML, inventory, free, list" />
+<meta name="description" content="An XML standard for sharing free listings" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="FreeList XML" />
+<meta property="og:description" content="An XML standard for sharing free listings" />
+<meta property="og:image" content="" />
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="FreeList XML">
+<meta name="twitter:image" content="">
+<meta property="twitter:description" content="An XML standard for sharing free listings">	
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=EB+Garamond:wght@400;600&family=Lato:wght@300;400&display=swap');
+
+body, html {
+margin:0;
+padding:0;
+}
+* {
+    box-sizing: border-box;
+}
+body{
+font-family: 'Open Sans', Helvetica, sans-serif;
+font-size: 17px;
+background-color: #fff;
+color: #333;
+}
+hr {
+border-top: 1px solid teal;
+width: 50%;
+margin: 2em auto;
+}
+h2, h3, h4{
+color: teal;
+font-weight: normal;
+}
+h2{
+margin-top:1.5em;
+}
+pre{
+background-color: #111;
+color: gold;
+display: block;
+padding: 1em;
+-moz-tab-size: 3; /* Firefox */
+tab-size: 3;
+overflow-x: auto;
+}
+.value{
+color: #fff !important;
+}
+code{
+background-color: #dee;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#topbar{
+color: #fff;
+width: 100%;
+text-align: left;
+background-color: teal;
+padding: 1em 1.5em
+}
+h1{
+float: left;
+margin: 1px;
+font-weight: normal;
+}
+nav{
+margin-top: 0.5em;
+float: right;
+text-align: right;
+}
+nav a{
+text-decoration: none;
+color: #fff;
+margin-left: 1em;
+}
+nav a:hover, nav a:active{
+color: gold;
+
+}
+#container{
+position: relative;
+margin: 0 auto;
+max-width: 900px;
+padding: 0.5em 1em;
+}
+#version{
+font-size: 13px;
+color: grey;
+position: absolute;
+top: 0.5em;
+right: 1.5em;
+}
+table{
+display: block;
+width: 100%;
+Xmin-width: 400px;
+Xmax-width: 720px;
+border-collapse: collapse;
+border: 1px dotted grey;
+overflow-x: auto;
+font-size: 16px;
+overflow-wrap: break-word;
+word-wrap: break-word;
+}
+th, td{
+padding: 1%;
+vertical-align: top;
+border: 1px dotted grey;
+width: 13%;
+Xwidth: auto;
+}
+td:nth-child(1){
+font-family: "Lucida Console", "Courier New", monospace;
+}
+th{
+background-color: gold;
+}
+th:nth-child(4), td:nth-child(4){
+width: 53%;
+Xwidth: auto;
+}
+</style>
+</head>
+<body>
+<div id="topbar" class="clearfix">
+<h1>FreeList XML</h1>
+<nav>
+<a href="#">Some link</a>
+<a href="#">Other link</a>
+<a href="#">Yet another link</a>
+</nav>
+</div>
+<div id="container"><div id="version">v1.0</div>
+<h2>About</h2>
+<p>FreeList XML (or FLiX) is an XML file standard for sites and applications that provide free public resources like goods, services or information. Similar to a website&rsquo;s sitemap, a FLiX file is an XML document that contains the application&rsquo;s current inventory of free listings and is usually placed in the application&rsquo;s public root folder, eg. &lsquo;www.example.com/freelist.xml&rsquo;</p>
+<p>The purpose of FLiX is to create a standard method for sharing free listings data that participating sites and applications can contribute to and benefit from. For example, using FLiX, two unrelated sites can aggregate each other&rsquo;s listing data, meaning that the users of both sites have a larger and more diverse inventory to choose from.</p>
+<p>FLiX files are public files and can be used by anyone. You don&rsquo;t need to be a contributor. Any third-party aggregator can use them to display items of interest to their audiences. The advantage to FLiX contributors is that they can reach a global audience more easily with backlinks to their site for users who wish to know more about their offers.</p>
+<h2>Implementation</h2>
+<p>If your site or application offers free items, services or knowledge, add your listings to an XML file called freelist.xml and place it in your site&rsquo;s home directory. You can then share this link with anyone who you'd like to aggregate your listings into their site, or add it to our registry so other site owners can find it.*</p>
+<p>Here&rsquo;s the most basic example of an FLiX file with one offer:</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;freelist&gt;
+&#9;&lt;header&gt;
+&#9;&#9;&lt;appID&gt;<span class="value">example.com</span>&lt;/appID&gt;
+&#9;&#9;&lt;date&gt;<span class="value">2022-07-12</span>&lt;/date&gt;
+&#9;&lt;/header&gt;
+&#9;&lt;list&gt;
+&#9;&#9;&lt;item&gt;
+&#9;&#9;&#9;&lt;title&gt;<span class="value">A free item</span>&lt;/title&gt;
+&#9;&#9;&#9;&lt;url&gt;<span class="value">https://example.com/a-free-item.html</span>&lt;/url&gt;
+&#9;&#9;&lt;/item&gt;
+&#9;&lt;/list&gt;
+&lt;/freelist&gt;</pre>
+<p>Note that your <code>appID</code> must be a unique ANSI string. Your site&rsquo;s domain is normally used. Check the registry to ensure you are using a unique <code>appID</code> and validate your XML before implementation. A file <code>date</code> is also required so aggregators can tell if they need to update their data or not.</p>
+<p>* Registering your Freelist.xml file is not required, but doing so will greatly increase your chances of data syndication and reduce the chances of errors. Bear in mind some aggregators will only accept files with a registered <code>appID</code>.</p>
+<p>Here&rsquo;s a more complete implementation with one listing that makes use of all possible values:</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;freelist&gt;
+&#9;&lt;header&gt;
+&#9;&#9;&lt;appID&gt;<span class="value">example.com</span>&lt;/appID&gt;
+&#9;&#9;&lt;appName&gt;<span class="value">Example Website</span>&lt;/appName&gt;
+&#9;&#9;&lt;appDesc&gt;<span class="value">A Website of Free Things</span>&lt;/appDesc&gt;
+&#9;&#9;&lt;date&gt;<span class="value">2022-07-12</span>&lt;/date&gt;
+&#9;&lt;/header&gt;
+&#9;&lt;list&gt;
+&#9;&#9;&lt;item&gt;
+&#9;&#9;&#9;&lt;title&gt;<span class="value">A Free Bike</span>&lt;/title&gt;
+&#9;&#9;&#9;&lt;url&gt;<span class="value">https://example.com/a-free-item.html</span>&lt;/url&gt;
+&#9;&#9;&#9;&lt;description&gt;<span class="value">Red with go-faster stripes!</span>&lt;/description&gt;
+&#9;&#9;&#9;&lt;imageURL&gt;<span class="value">https://example.com/a-free-item.html</span>&lt;/imageURL&gt;
+&#9;&#9;&#9;&lt;terms&gt;<span class="value">Free</span>&lt;/terms&gt;
+&#9;&#9;&#9;&lt;category&gt;<span class="value">Bicycles</span>&lt;/category&gt;
+&#9;&#9;&#9;&lt;city&gt;<span class="value">Boston</span>&lt;/city&gt;
+&#9;&#9;&#9;&lt;state&gt;<span class="value">Massachusetts</span>&lt;/state&gt;
+&#9;&#9;&#9;&lt;countryName&gt;<span class="value">United States</span>&lt;/countryName&gt;
+&#9;&#9;&#9;&lt;countryCode&gt;<span class="value">US</span>&lt;/countryCode&gt;
+&#9;&#9;&#9;&lt;lat&gt;<span class="value">42.29988</span>&lt;/lat&gt;
+&#9;&#9;&#9;&lt;long&gt;<span class="value">-71.46388</span>&lt;/long&gt;
+&#9;&#9;&#9;&lt;itemID&gt;<span class="value">1322</span>&lt;/itemID&gt;
+&#9;&#9;&#9;&lt;quantity&gt;<span class="value">1</span>&lt;/quantity&gt;
+&#9;&#9;&#9;&lt;tags&gt;<span class="value">bike,bicycle,cycling</span>&lt;/tags&gt;
+&#9;&#9;&#9;&lt;updated&gt;<span class="value">2022-07-12</span>&lt;/updated&gt;
+&#9;&#9;&lt;/item&gt;
+&#9;&lt;/list&gt;
+&lt;/freelist&gt;</pre>
+<h2>Complete list of header parameters</h2>
+<p>These parameters should appear once at the top of the file inside the <code>&lt;header&gt;&lt;/header&gt;</code> tag.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter
+</th>
+<th>
+Required
+</th>
+<th>
+Data type
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+appID
+</td>
+<td>
+<em>required</em>
+</td>
+<td>
+string
+</td>
+<td>
+Your unique originator ID. Usually a domain name, but any string is acceptable as long as it&rsquo;s unique. eg. &ldquo;app_345&rdquo;. Check FLiX registry to ensure you use a unique ID
+</td>
+</tr>
+<tr>
+<td>
+date
+</td>
+<td>
+<em>required</em>
+</td>
+<td>
+yyyy-mm-dd
+</td>
+<td>
+The date when the file was created as a W3C date; eg.&ldquo;2022-11-14&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+appName
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+The name of the originating site; eg. &ldquo;My Free Site&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+appDesc
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+An optional description of your site/app; eg. &ldquo;A website for cool, free stuff&rdquo;
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Complete list of item parameters</h2>
+<p>All your listings should be contained inside a <code>&lt;list&gt;&lt;/list&gt;</code> tag. Each listing then has its own <code>&lt;item&gt;&lt;/item&gt;</code> tag which contains the individual parameters specific to each listing.</p>
+
+<table>
+<thead>
+<tr>
+<th>Parameter
+</th>
+<th>
+Required
+</th>
+<th>
+Data type
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+title
+</td>
+<td>
+<em>required</em>
+</td>
+<td>
+string (max 100 bytes)
+</td>
+<td>
+The title of the listing; eg. &ldquo;Boy&rsquo;s Bicycle&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+url
+</td>
+<td>
+<em>required</em>
+</td>
+<td>
+string URL
+</td>
+<td>
+The unique URL of the listing; eg. &ldquo;&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+type
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+What&rsquo;s on offer. Should be &lsquo;item&rsquo;, &lsquo;skill&rsquo;, or &lsquo;info&rsquo;. Info should be used for any non-transactable listing; eg. A meeting place, or an announcement. (Readers: Where blank, malformed or missing, &lsquo;item&rsquo; should be the assumed type)
+</td>
+</tr>
+<tr>
+<td>
+quantity
+</td>
+<td>
+optional
+</td>
+<td>
+integer
+</td>
+<td>
+The number of items available. (Readers: Where blank, malformed or missing, 1 should be the assumed value)
+</td>
+</tr>
+<tr>
+<td>
+terms
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+&lsquo;free&rsquo;, &lsquo;loan&rsquo;, &lsquo;commons&rsquo;, &lsquo;swap&rsquo;. (Readers: Where blank, malformed or missing, &lsquo;free&rsquo; should be the assumed terms)
+</td>
+</tr>
+<tr>
+<td>
+imageURL
+</td>
+<td>
+optional
+</td>
+<td>
+string URL
+</td>
+<td>
+The main image of the listing; eg. &ldquo;https:// example.com /images/1.jpg&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+description
+</td>
+<td>
+optional
+</td>
+<td>
+string (max 500 bytes)
+</td>
+<td>
+The listing description; eg. &ldquo;Five speed trekking bike, hardly used.&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+city
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+The city location of the listing; eg. &ldquo;Boston&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+state
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+The state or region of the listing; eg. &ldquo;Massachusetts&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+countryName
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+The name of the country of the listing; eg. &ldquo;United States&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+countryCode
+</td>
+<td>
+optional
+</td>
+<td>
+2-letter ISO string
+</td>
+<td>
+The <!-- a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO-3166 2-Letter</a --> country code; eg. &ldquo;US&rdquo;
+</td>
+</tr>
+<tr>
+<td>
+lat
+</td>
+<td>
+optional
+</td>
+<td>
+decimal
+</td>
+<td>
+The latitude coordinate of the listing; eg. 42.29988
+</td>
+</tr>
+<tr>
+<td>
+long
+</td>
+<td>
+optional
+</td>
+<td>
+decimal
+</td>
+<td>
+The longitude coordinate of the listing; eg. -71.29988
+</td>
+</tr>
+<tr>
+<td>
+itemID
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+Your unique listing ID for this item.
+</td>
+</tr>
+<tr>
+<td>
+language
+</td>
+<td>
+optional
+</td>
+<td>
+ll-CC
+</td>
+<td>
+ISO language and locale code; eg. &ldquo;en-US&rdquo; (American English)
+</td>
+</tr>
+<tr>
+<td>
+updated
+</td>
+<td>
+optional
+</td>
+<td>
+yyyy-mm-dd
+</td>
+<td>
+Date when the listing was last updated
+</td>
+</tr>
+<tr>
+<td>
+category
+</td>
+<td>
+optional
+</td>
+<td>
+string
+</td>
+<td>
+Your category name for the listing; eg. &ldquo;Bicycles&rdquo;.
+Note: there is no universally-agreed format to listing categories, but we have compiled a list of the most common ones here that you might like to use in your application.
+</td>
+</tr>
+<tr>
+<td>
+tags
+</td>
+<td>
+optional
+</td>
+<td>
+comma-separated string
+</td>
+<td>
+Keyword tags associated with the listing; eg. &ldquo;Bicycles, Cycling, Racing Bikes&rdquo;
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note: even though location data like city and lat/long coordinates are not required, they should be supplied wherever possible to ensure useful data portability. ie. Your listings may appear anywhere in the world and there&rsquo;s not much point listing a free bicycle if no-one knows where it is!</p>
+<h2>Best practices for contributors</h2>
+<p>Before creating your file, please consider these best practices to ensure a good experience for all users of this data:</p>
+<ol>
+<li>
+<p>Ensure you are using a unique <code>appID</code> which will uniquely identify your content on other networks. Check our registry to make sure your <code>appID</code> is unique, then add yours to ensure no-one else uses it;</p>
+</li>
+<li>
+<p>Follow the recommended listing parameters as much as you can to ensure a better experience for other networks and end-users, especially item location, image and description;</p>
+</li>
+<li>
+<p>The maximum file size is 10MB or 10,000 listings. If your site has more listings, consider using extra files (eg. freelist-1.xml, freelist-2.xml, etc), and create a file index; (find out how)</p>
+</li>
+<li>
+<p>Purge and rewrite your inventory file regularly according to how busy your site is. Once every 24 hours should suffice, but more often if your site has a high volume of transactions. <em>N</em><em>ote:</em> <em>u</em><em>nlike RSS files, y</em><em>our </em><em>FLiX</em><em> file should contain all your current live offers, not just the latest</em>.</p>
+</li>
+<li>
+<p>Please observe the correct data types and string length limitations.</p>
+</li>
+<li>
+<p>Do not include names, contact information of individuals or any sensitive data in your inventory, as you might breach data privacy rights;</p>
+</li>
+<li>
+<p>If you have content quality metrics available, consider only including higher quality listings to your inventory to help reduce spam and fake offers on other networks;</p>
+</li>
+<li>
+<p>Ensure that completed, expired or removed listings are removed from future inventory files to avoid confusion and broken links;</p>
+</li>
+<li>
+<p>Ensure that any image urls you set are accessible from any server;</p>
+</li>
+<li>
+<p>Compress larger files with Gzip to save bandwidth. (find out how)</p>
+</li>
+<li>
+<p>Remember to validate your XML before submission!</p>
+</li>
+</ol>
+<h2>Best practices for readers &amp; aggregators</h2>
+<p>Before including FLiX inventory files in your site or application, please observe these best practices:</p>
+<ol>
+<li>
+<p>Always display the originator name or <code>appID</code> anywhere the originator&rsquo;s listings are displayed;</p>
+</li>
+<li>
+<p>Always link to the originating site specified in the <code>url</code> string</p>
+</li>
+<li>
+<p>Reload the inventory and refresh your database often to avoid expired / broken links in the listings. Once every 24 hours is adequate in most cases. NB. Each inventory file is a complete inventory and should overwrite all previous data from the same originator;</p>
+</li>
+<li>
+<p>Be fussy about what data you import. Use filters to skip data that you might not want, or require certain parameters that you do. For example, if your site/app uses a map, make sure imported listings have a lat/long pair.</p>
+</li>
+<li>
+<p>Do not alter or amend the data included in the inventory file;</p>
+</li>
+<li>
+<p>Do not use or publish the data except for the purposes of displaying free listings;</p>
+</li>
+<li>
+<p>Do not use the data to obtain or publish any other data from the originator&rsquo;s site (eg. Usernames or contact information);</p>
+</li>
+</ol>
+<h2>Compressing your files with gzip</h2>
+<p>We recommend compressing larger files (&gt;2MB) with Gzip to reduce bandwidth usage. XML files can be greatly compressed which means that your files can be sent and downloaded up to five times faster. Gzipped files have the extension .GZ, so we recommend that you output your XML and Gzip it to a file called freelist.xml.gz.</p>
+<p>Reading a freelist.xml.gz file will require that you decompress it first.</p>
+<p>Implementing Gzip varies from platform to platform, so we recommend you search &lsquo;GZIP&rsquo; along with whatever platform / language you&rsquo;re using to find out how to compress and decompress your files with Gzip.</p>
+<h2>Using multiple inventory files</h2>
+<p>If your site has more than 10,000 listings, or your XML file exceeds 10MB, you should split your listings into multiple files (eg. freelist1.xml, freelist2.xml, freelist3.xml, etc), and list these files in a separate index file.</p>
+<p>Each file should be listed in its own <code>&lt;file&gt;&lt;/file&gt;</code> tag, nested inside an <code>&lt;index&gt;&lt;/index&gt;</code> tag, like this:</p>
+<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; standalone=&quot;yes&quot;?&gt;
+&lt;index&gt;
+&#9;&lt;file&gt;<span class="value">https://example.com/freelist1.xml</span>&lt;/file&gt;
+&#9;&lt;file&gt;<span class="value">https://example.com/freelist2.xml</span>&lt;/file&gt;
+&#9;&lt;file&gt;<span class="value">https://example.com/freelist3.xml</span>&lt;/file&gt;
+&lt;/index&gt;</pre>
+<p>Note: file URLs should be absolute URLs, not relative.</p>
+<p>We recommend naming the index file freelist.xml and numbering the individual files accordingly as per this example. You can then add this file into our registry as the main file.</p>
+<p>When reading any freelist.xml file, test for the <code>&lt;index&gt;&lt;/index&gt;</code> tag first before trying to extract any listing data. If the index tag exists, then iterate through the listed files and extract data from each of them. If no index tag exists, then extract data from the main file as normal.</p>
+<script type="text/javascript" src="//colinrturner.com/fund_box.js?v=2" id="funding_box" data-site="FreeListXML.org" data-state="closed"></script>
+</div>
+</body>
+</html>

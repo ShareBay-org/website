@@ -1,0 +1,52 @@
+Options +FollowSymlinks
+ErrorDocument 500 /error500.html
+ErrorDocument 508 /error508.html
+ErrorDocument 404 /error404.html
+
+deny from 129.0.205.36
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# RewriteCond %{HTTP_HOST} ^www\.
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^donate/? pages.cgi?id=donate [NE,NC,L]
+RewriteRule ^help/? pages.cgi?id=help [NE,NC,L]
+RewriteRule ^media/? pages.cgi?id=media [NE,NC,L]
+RewriteRule ^notifications/? pages.cgi?id=showallnotifications [NE,NC,L]
+RewriteRule ^how-it-works/? pages.cgi?id=how-it-works [NE,NC,L]
+RewriteRule ^stories/?([^.]+)?$ blog/$1 [R=301,L]
+RewriteCond %{QUERY_STRING} ^id=([0-9]*)$
+RewriteRule ^blog/?$ blog.cgi?id=%1 [NE,NC,L]
+# RewriteRule ^blog/?\?id=([0-9]+)?$ blog.cgi?id=$1 [NE,NC,L]
+RewriteRule ^blog/?([^.]+)?$ blog.cgi?id=$1 [NE,NC,L]
+RewriteRule ^faqs/? pages.cgi?id=faqs [NE,NC,L]
+RewriteRule ^contact/? pages.cgi?id=contact [NE,NC,L]
+RewriteRule ^transactions([^.]+)?$ transactions.cgi$1 [NE,NC,L]
+RewriteRule ^reviews([^.]+)?$ reviews.cgi$1 [NE,NC,L]
+RewriteCond %{QUERY_STRING} ^id=([0-9]*)$
+RewriteRule ^review/?$ reviews.cgi?a=showreview&id=%1 [NE,NC,L]
+RewriteRule ^join(.*)?$ profile.cgi$1 [NE,NC,L]
+RewriteRule ^edit$ profile.cgi?a=edit [NE,NC,QSA,L]
+RewriteRule ^profile([^.]+)?$ profile.cgi$1 [NE,NC,L]
+RewriteRule ^listings([^.]+)?$ listing.cgi$1 [NE,NC,L]
+RewriteRule ^listing([^.]+)?$ listing.cgi$1 [NE,NC,L]
+RewriteRule ^post/?$ listing.cgi?a=new [NE,NC,L]
+RewriteRule ^messages([^.]+)?$ messages.cgi$1 [NE,NC,L]
+RewriteRule ^search/?$ search.cgi$1 [NE,NC,L]
+RewriteRule ^map/?$ map.cgi$1 [NE,NC,L]
+RewriteRule ^shop(.*)?$ pages.cgi?id=donate [NE,NC,L]
+RewriteRule ^about/?$ pages.cgi$1 [NE,NC,L]
+RewriteRule ^page/?$ pages.cgi$1 [NE,NC,L]
+RewriteRule ^click([^.]+)?$ click.cgi$1 [NE,NC,L]
+RewriteRule ^admin/?$ admin.cgi$1 [NE,NC,L]

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var domain = 'sharebay.org';
+var baseURL = 'https://www.sharebay.org';
+var visitorID = 'Wc0ZM4KPMP9bDachl';
+var LOGGED_IN = false;</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="theme-color" content="#E8E8E8"/>
+<meta name="mobile-web-app-capable" content="yes">
+<title>Sharebay - The Sharing Network</title>
+<meta name="keywords" content="sharing, library, tool library, skill library, sharing library, skill sharing, volunteers, internet of things, library of things, degrowth, open access, open access economy, resource-based economy, gift economy, sharing economy, buy nothing, cooperative, shop less share more, freeworlder, colin r turner, freebay, p2p, freeconomy, free goods and services" />
+<meta name="description" content="We are a community of thousands of people across the world sharing free goods and services" />
+<link rel="canonical" href="https://www.sharebay.org/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sharebay - The Sharing Network" />
+<meta property="og:description" content="We are a community of thousands of people across the world sharing free goods and services" />
+<meta property="og:url" content="https://www.sharebay.org/" />
+<meta property="og:image" content="https://www.sharebay.org/i/giving-balloon-OG-image.png" />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@sharebayorg">
+<meta property="twitter:title" content="Sharebay - The Sharing Network">
+<meta name="twitter:image" content="https://www.sharebay.org/i/giving-balloon-OG-image.png">
+<meta property="twitter:description" content="We are a community of thousands of people across the world sharing free goods and services">	  
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/styles.css?v=3.035">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b1f9d7508a.js" crossorigin="anonymous"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2LYB66GDWG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2LYB66GDWG');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://www.sharebay.org/js/linkify.min.js"></script>
+<script src="https://www.sharebay.org/js/linkify-jquery.min.js"></script>
+
+<style>
+
+body{
+	
+background-color: var(--opaque);
+}
+.homeBG{
+	width: 100%;
+	background: var(--opaque) url('https://www.sharebay.org/i/crowds.jpg') no-repeat center center; 
+	background-size: cover;
+	background-blend-mode: multiply;
+
+}
+.heading{
+	font-weight: 600;
+	text-align: center;
+	color: white;
+	text-shadow:
+	0 6px 6px rgba(0,0,0,0.84);
+}
+.boomer{
+	font-size: 84px;
+}
+.subheading{
+	font-size: 40px;
+}
+.home-page-height{
+	min-height: 85%;
+	min-height: calc(100vh - 160px);
+	position: relative;
+}
+.button-container{
+	width: auto;
+	display: inline-block;
+	max-width: 500px;
+	text-align: center;
+	border-radius: 20px;
+	background: rgba(255,255,255,1);
+	padding: 1em 2em;
+	}
+a.home-button{
+	background-color: var(--brand);
+	display: inline-block;
+	width: 70%;
+	max-width: 400px;
+	font-size: 20px;
+	padding: 10px 20px;
+	margin: 2%;
+	border-radius: 9px;
+	color: white;
+	text-transform: uppercase;
+	transition: 0.3s ease;
+}
+a.home-button:hover{
+	text-decoration: none;
+	background: var(--darkbrand);
+	color: #fff;
+}
+.flex-center{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.bullets{
+	font-size: 1.2em;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	color: var(--darkbrand);
+	overflow: hidden;
+	margin-bottom: 2em;
+	border-radius: 16px;
+	}
+
+.fadein {
+    opacity: 0;
+}
+.slidein-left{
+    opacity: 0;
+	position: absolute;
+	width: 100%;
+	top:0;
+	bottom:0;
+	right: 20%;	
+}
+.slidein-right{
+    opacity: 0;
+	position: absolute;
+	width: 100%;
+	top:0;
+	bottom:0;
+	left: 20%;	
+}
+.guest{
+	background: var(--navy);
+	color: white;
+	padding: 5px 10px;
+}
+.image-background, .image-contain{
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.image-background{
+	background-size: cover;
+}
+.image-contain{
+	background-size: contain;
+}
+.giving-container{
+	min-height: 45vw;
+	overflow: hidden;
+}
+.giving{
+	min-height: 45vw;
+}
+.giving h1 {
+    position: absolute;
+    bottom: 8%;
+    left: 15%;
+    font-size: 2.4em;
+    text-align: left;
+}
+
+@media only screen and (max-width : 600px) {
+
+h1{
+	font-size: 1.8em;
+}
+h2{
+	font-size: 1.3em;
+}
+.bullets{
+	margin-bottom: 0;
+	border-radius: 0;
+	}
+.giving-container{
+	min-height: 90vw;
+}
+.giving{
+	min-height: 90vw;
+}
+.giving h1 {
+    left: 10%;
+    font-size: 2.1em;
+}
+.home-page-height{
+Xmin-height: calc(50vh - 60px);
+}
+.boomer{
+	font-size: 48px;
+}
+.subheading{
+	font-size: 28px;
+}
+a.home-button{
+	margin: 10px 4%;
+}
+}
+
+@media only screen and (max-width : 400px) {
+
+body{
+	font-size: 14px;
+}
+}
+</style>
+<script>
+
+$(window).scroll(function(){
+	
+        $('.fadein').each( function(i){
+			
+            var bottom_of_object = $(this).offset().top + ($(this).outerHeight() / 2);
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},400);
+				
+            }
+        }); 
+		
+        $('.slidein-left').each( function(i){
+			
+            var bottom_of_object = $(this).offset().top + ($(this).outerHeight() / 2);
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+				$(this).animate({'opacity':'1'},{duration : 400, queue : false})
+						.animate({'right' : 0},{duration : 400, queue : false});
+            }
+			
+        }); 
+		
+        $('.slidein-right').each( function(i){
+			
+            var bottom_of_object = $(this).offset().top + ($(this).outerHeight() / 2);
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+				$(this).animate({'opacity':'1'},{duration : 400, queue : false})
+						.animate({'left' : 0},{duration : 400, queue : false});
+            }
+            
+        }); 
+    });
+
+</script>
+
+<style>
+
+</style>
+<script>
+</script>
+		
+</head>
+<body>
+<div id="loading"><div class="spinner"></div></div>
+<div id="contentBlur"></div>
+<div id="toast"><span id="toastMessage"></span><div id="closeToast">&times;</div></div>
+<div id="modalWrap">
+<div id="modal"><div id="closeModal">&times;</div>
+<div id="modalContent"><div class="tSpinner"></div></div>
+</div></div>
+<div id ="topbar">
+<div id="logo" class="flex-center-left pointer" onclick="window.location.href='https://www.sharebay.org';"><img alt="Sharebay logo" src="https://www.sharebay.org/i/logo.svg"/></div>
+
+<!-- LINKS -->
+
+<div class="bigLinks">
+
+<!-- BIG SCREENS -->
+<a class="button showMenu" title="Log in or register" href="javascript:void(0);">Log in&nbsp;<div class="pro_thumb" title="Log in or register"  style="background-image: url('https://www.sharebay.org/user_pics/q_t.jpg');"></div></a>
+</div>
+<div class="menu" id="notifications"></div>
+<div class="menu" id="messages"></div>
+<div class="menu" id="subMenu">
+<a class="button" href="https://www.sharebay.org/join">Join Sharebay</a>
+<a class="button showLogin" href="javascript:void(0);">Log in</a>
+</div>
+</div><div class="screen">
+<div class="homeBG clearfix">
+<div class="half flex-center home-page-height bigOnly"></div>
+
+<div class="half home-page-height flex-center">
+<div class="button-container">
+<div class="content">
+<img src="https://www.sharebay.org/icon.png" style="width:200px;height:200px;margin-top:-100px;"/>
+<h1 class="center">Welcome to our global sharing network of <span id="member-count" data-count="3155">0</span> members sharing <span id="listing-count" data-count="14401">0</span> free goods and services.</h1>
+</div><p class="center"><a class="green-button" href="https://www.sharebay.org/join" title="Join Sharebay - It's Free">Join Sharebay - It's Free!</a></p><p class="center smaller"><a class="showLogin" href="javascript:void(0);">Already a member? Log in</a></p>
+<!-- a class="home-button clear" a href="https://www.sharebay.org/join">Join (It's free)</a>
+<a class="home-button showLogin clear">Log in</a -->
+<div class="center smaller top20 hidden">
+<a href="https://www.sharebay.org/?search" class="guest">CONTINUE AS GUEST</a>
+</div></div></div></div>
+
+<div class="content">
+<h1 class="center">Join our amazing community of givers and helpers!</h1>
+<div class="giving-container">
+<div class="half flex-center giving">
+<div class="giving image-contain slidein-left" style="background-image: url('https://www.sharebay.org/i/giving-balloon-01.png');">
+<h1>Give a little...</h1>
+</div>
+</div>
+<div class="half flex-center giving">
+<div class="giving image-contain slidein-right" style="background-image: url('https://www.sharebay.org/i/giving-balloon-02.png');">
+<h1>Get a lot!</h1>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="content">
+<h1 class="center">That's it. There's no catch.</h1>
+<h2 class="center">Sharebay is free to use and always will be.</h2>
+</div>
+<div>
+<div class="bullets green-white">
+<img class="full-width-image bottom20" src="https://www.sharebay.org/i/nine-ways.jpg"/>
+<div class="content">
+<p>Use Sharebay to:</p>
+<ul>
+<li>Enjoy free goods and services!</li>
+<li>Share your talents &amp; skills</li>
+<li>Give away items you no longer need</li>
+<li>Get help when you need it</li>
+<li>Reduce emissions and waste</li>
+<li>Promote sharing and collaboration</li>
+<li>Build trust locally and around the world</li>
+<li>Organise community programs and meetups</li>
+<li>Meet like-minded people</li>
+</ul><p class="center"><a class="green-button" href="https://www.sharebay.org/join" title="Join Sharebay - It's Free">Join Sharebay - It's Free!</a></p><p class="center smaller"><a class="showLogin" href="javascript:void(0);">Already a member? Log in</a></p></div></div></div>
+
+<script>
+
+const memberCount = document.getElementById('member-count');
+const listingCount = document.getElementById('listing-count');
+let m_count = 0;
+let l_count = 0;
+
+const memberCountUp = setInterval(() => {
+  let m_boxCount = parseInt(memberCount.dataset.count)
+  if(m_count == m_boxCount) clearInterval(memberCountUp)
+  memberCount.innerHTML = m_count.toLocaleString()
+  m_count = m_count + Math.floor((m_boxCount/100))
+  if(m_count > m_boxCount) m_count = m_boxCount
+}, 20);
+
+const listingCountUp = setInterval(() => {
+  let l_boxCount = parseInt(listingCount.dataset.count)
+  if(l_count == l_boxCount) clearInterval(listingCountUp)
+  listingCount.innerHTML = l_count.toLocaleString()
+  l_count = l_count + Math.floor((l_boxCount/100))
+  if(l_count > l_boxCount) l_count = l_boxCount
+}, 20);
+
+
+</script></div>
+<div class="bottom"><div class="bottomLinks-container">
+	<div class="bottomLinks">
+	<p>Browse</p>
+	<a href="https://www.sharebay.org/?search&filter=offers&order=latest" title="Latest offers">Latest offers</a>
+	<a href="https://www.sharebay.org/?search&filter=requests&order=latest" title="Requests">Latest requests</a>
+	<a href="https://www.sharebay.org/?search&filter=members&order=latest" title="Browse newest members">Latest members</a>
+	<a href="https://www.sharebay.org/map" title="Search on map">Search on map</a>
+	<a href="https://www.sharebay.org/page?id=categories" title="Browse categories<">Browse categories</a>
+	<a href="https://www.sharebay.org/post" title="Create a listing">Create a listing</a>
+	<a href="https://www.sharebay.org/page?id=templates" title="Browse our listing templates">Listing templates</a>
+</div>
+	<div class="bottomLinks">	
+	<p>About Sharebay</p>
+	<a href="https://www.sharebay.org/about" title="About Sharebay">About</a>
+	<a href="https://www.sharebay.org/how-it-works" title="How Sharebay works">How it works</a>
+	<a href="https://www.sharebay.org/page?id=stats" title="Statistics">Statistics</a>
+	<a href="https://www.sharebay.org/transactions" title="Public Transaction Record">Transaction Record</a>
+	<a href="https://www.sharebay.org/faqs" title="Frequently asked questions">FAQs</a>
+	<a href="https://www.sharebay.org/blog" title="Blog">Sharebay Blog</a>
+	<a href="https://www.sharebay.org/page?id=terms-of-service" title="Terms of service">Terms of service</a>
+	<a href="https://www.sharebay.org/page?id=privacy-policy" title="Privacy policy">Privacy policy</a>
+	<a href="https://www.sharebay.org/contact" title="Contact us">Contact us</a>
+</div>
+	<div class="bottomLinks">
+	<p>My account</p>
+		<a class="showLogin" href="javascript:void(0);">Log in</a>
+		<a href="https://www.sharebay.org/join">Create account</a>
+</div>
+	<div class="bottomLinks">
+	<p>Find us on</p>
+	<a href="https://facebook.com/sharebay.org" title="Facebook">Facebook</a>
+	<a href="https://twitter.com/sharebayorg" title="Twitter">Twitter</a>
+	
+	<p>Support us</p>
+	<a href="https://www.sharebay.org/donate" title="Support us">Become a patron</a>
+	<a href="https://www.sharebay.org/media" title="Media / Press">Media &amp; printables kit</a>
+</div>
+</div>
+<div class="bottomStrap">
+<a href="https://ezweb.ie/" target="_blank" style="color: lightgrey">Designed by ezWeb.ie</a> &#127795; <a href="https://wildhost.co.uk/" target="_blank" style="color: lightgrey">Powered by Wildhost</a><br/><a href="https://www.trade-free.org/directory/goods-services/sharebay-org/" title="Sharebay.org is a trade-free site" target="_blank" style="color: lightgrey">Sharebay.org is a trade-free site</a>
+</div></div>
+<script>
+$('.comment, .chat-right, .chat-left, .chat-alert').linkify({target: "_blank"});
+</script>
+<script src="//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyD4zc3ELJ8ZgqLMZqLhLGv7beewD6wN9eU"></script>
+<script src="https://www.sharebay.org/js/common.js?v=3.035"></script>
+</body></html>

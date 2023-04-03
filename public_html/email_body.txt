@@ -1,0 +1,86 @@
+From SRS0=TtIiG+=Z2=gmail.com=colinrturner@sharebay.org Fri Sep 23 23:12:21 2022
+Received: from mail-ej1-f43.google.com ([209.85.218.43]:46661)
+	by othello.ldn.kgix.net with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.95)
+	(envelope-from <colinrturner@gmail.com>)
+	id 1obrqK-0005jh-7U
+	for notify@sharebay.org;
+	Fri, 23 Sep 2022 23:12:21 +0000
+Received: by mail-ej1-f43.google.com with SMTP id bj12so3487767ejb.13
+        for <notify@sharebay.org>; Fri, 23 Sep 2022 16:12:02 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20210112;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date;
+        bh=dPxWUU5Qt16oUhc0Zz3Xao6g7kdL3EkfoXV/aq/7Njk=;
+        b=TtK2H/5lM+czp22E0sJgQnB912n53pX895slo0vJGdwex8g7k0yZlirCA0HjQnJVDG
+         w3I6I8Pgq3YBKyq0sEILCn8WOM1Mrdkqeu1GxOzPMDmAP0YRNg45osTABakrjCdR3q9i
+         d8fNjBTTJJ4ndc0qxS6qEuuVAA27eHURtC5S4ol9jIBMiGIw4/3qBLT+elzPRKamIgsJ
+         XBMrsPEwI1izfjRVpPa/uSheBZkCuTtTeO+IRk6+Q5J3/NTsBPpIndVzrKiRUg3V4FoT
+         NKRZAW/kV9LMfAsD25e+L4fr0nA8+G50uUl1qt++fJhKJogArERsKjgS3e/dFz0pMsni
+         Janw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date;
+        bh=dPxWUU5Qt16oUhc0Zz3Xao6g7kdL3EkfoXV/aq/7Njk=;
+        b=ihncwQmqPhlhGEeY/KoVEm+TSkAJOI8iyW9iB3+5ycwChB7WJGbGDAF8MJJManhmqr
+         jF9pWheF+9Dlzi+twCMcM9exhH0/7opCv/2vI07v6SIGYcZiVRkxo8bCMbQE0JIyRpm2
+         3LhlW1Zpy/uwMbDv6fPYyxgbAHfbL13SMFxlD0BnCw92tIdHFZZLj4yIdMEDxBvu7HkJ
+         6/uKJpymO0s3VPsqlMq1qJIV5VO/aYAGbLqv0r0P8nncUoqwqHQg338Y6K6JgaUTjI06
+         B8sjNqzNDeGbibxoKsE+TiQX+wzyz/8+xUw3WmsEs9hvZgdv8/sH7HyLG0Ec6XMelONE
+         a+Og==
+X-Gm-Message-State: ACrzQf0Y2dexHG8/POJVY6fKEDqjKcalagP/68WQndOhkuyDpvBO+Hci
+	EvUhohiof+WssgTany0LthseqRmMyQt/drLfXTUqLoq3
+X-Google-Smtp-Source: AMsMyM62uMcj0ApmtmMN75Vc5kI/0TaaYZKrtEjVl2t1TmAihbzKAfvbxk3BTeRh+0RXwEUsYFmOGD5s+0yXgV0lqTk=
+X-Received: by 2002:a17:907:2d91:b0:782:7301:6602 with SMTP id
+ gt17-20020a1709072d9100b0078273016602mr7008813ejc.107.1663974700740; Fri, 23
+ Sep 2022 16:11:40 -0700 (PDT)
+MIME-Version: 1.0
+From: Colin Turner <colinrturner@gmail.com>
+Date: Sat, 24 Sep 2022 00:11:30 +0100
+Message-ID: <CAPT1aJwVQQ4iUBbN7fBqwXq8PDff+33RFOqXbZxt1V0s7ehL-w@mail.gmail.com>
+Subject: Almost der
+To: notify@sharebay.org
+Content-Type: multipart/alternative; boundary="000000000000f3f4b405e9604cf2"
+X-Spam-Status: No, score=1.8
+X-Spam-Score: 18
+X-Spam-Bar: +
+X-Ham-Report: Spam detection software, running on the system "othello.ldn.kgix.net",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ 
+ Content analysis details:   (1.8 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+                             provider
+                             [colinrturner[at]gmail.com]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  2.0 PYZOR_CHECK            Listed in Pyzor
+                             (https://pyzor.readthedocs.io/en/latest/)
+  0.0 FSL_BULK_SIG           Bulk signature with no Unsubscribe
+X-Spam-Flag: NO
+
+--000000000000f3f4b405e9604cf2
+Content-Type: text/plain; charset="UTF-8"
+
+Now
+
+--000000000000f3f4b405e9604cf2
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Now</div>
+
+--000000000000f3f4b405e9604cf2--
+

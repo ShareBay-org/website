@@ -1,0 +1,20 @@
+<gfl version="1.0">
+<source>
+<app_id>sharebay.org</app_id>
+<name>Sharebay</name>
+<description>We are building a global sharing network.</description>
+<published>00-00-12-24-07-2022</published>
+<language>en</language>
+</source>
+<inventory>
+<item>
+<title></title>
+<description></description>
+<image_url></image_url>
+<url></url>
+<type></type>
+<terms></terms>
+
+</item>
+</inventory>
+</gfl>
