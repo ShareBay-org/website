@@ -1,5 +1,7 @@
 # ShareBay.org website
 
+The development server is at https://sharebay-dev.org
+
 ## Run Locally
 
 * Note that we don't have this fully working yet in an environment outside cPanel.
