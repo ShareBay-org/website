@@ -1,4 +1,8 @@
 
-- update logo
+- Update logo
 
-- for dev, install a cPanel and get site running (with MySQL)
+- For dev, install a cPanel and get site running (with MySQL) :
+  - Maybe get Apache running locally (failed on Trent's Mac because "you may need to install the Image::Resize module" at "./common.pl line 1525" even though `cpan` installed it fine).
+  - Maybe run a Docker container with Apache & Perl, even pointing at local files.
+  - Configure from source :
+    - Move config.pl to a non-source-controlled location.

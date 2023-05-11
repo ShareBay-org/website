@@ -60,6 +60,7 @@ our $SBdb = DBI->connect("DBI:mysql:database=$dbName;host=$dbHost;mysql_local_in
 my $SB_enc = $SBdb->do("SET NAMES 'utf8mb4'");
 
 # CONNECT TO HONORPAY DATABASE
+#our $HPdb = 0; # bypass HonorPay: uncomment this and comment out the next 2 lines
 our $HPdb = DBI->connect("DBI:mysql:database=$HP_dbName;host=$HP_dbHost;mysql_local_infile=1", $HP_dbUser, $HP_dbPass,{RaiseError => 1, PrintError => 1});
 my $HP_enc = $HPdb->do("SET NAMES 'utf8mb4'");
 
@@ -650,7 +651,7 @@ return $d
 }
 
 sub getCurrentLocation{
-require $siteroot . '/get_location.pl';
+require $thisDir . '/get_location.pl';
 my ($lat, $lon, $city, $region, $country, $country_iso) = &getIPLocation($ip);
 return ($lat, $lon, $city, $region, $country, $country_iso);
 }
@@ -897,6 +898,7 @@ return $string;
 }
 
 sub syncHonorPay{
+#return; # bypass HonorPay: uncomment this
 my ($FW_id, $email, $sync) = @_;
 my $honors;
 my $result;
@@ -1780,6 +1782,7 @@ sub qtySelect{
 }
 
 sub getHonors{
+#return (); # bypass HonorPay: uncomment this
 my $HP_id = shift;
 my $honors;
 if ($HP_id){

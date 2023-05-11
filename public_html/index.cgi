@@ -8,7 +8,7 @@ use strict;
 use warnings;
 use CGI::Carp qw( fatalsToBrowser );
 
-require 'common.pl';
+require './common.pl';
 our (%FORM, $ip, $now, $salt, $admin, $notify, $newsletter, $domain, $baseURL, $siteroot, $root, $LOGGED_IN, $myID, $myName, $myImage, $myLang, $myTrans, $myLat, $myLon, $myAuth, $myModerator, $myAuthor, $myAdmin, $myJoined, $myListingCount, $a, $isModal, $SBdb, $HPdb, $maintenance, $version, $defaultImage);
 
 if ($ENV{QUERY_STRING} =~ /^search/){
