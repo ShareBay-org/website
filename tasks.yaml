@@ -3,6 +3,8 @@
 
 - For dev, install a cPanel and get site running (with MySQL) :
   - Maybe get Apache running locally (failed on Trent's Mac because "you may need to install the Image::Resize module" at "./common.pl line 1525" even though `cpan` installed it fine).
-  - Maybe run a Docker container with Apache & Perl, even pointing at local files.
+  - Maybe run a Docker container with Apache & Perl, even pointing at local files. See https://perlmaven.com/getting-started-with-perl-on-docker
   - Configure from source :
+    - Change instructions to use config.pl $siteroot & $root
     - Move config.pl to a non-source-controlled location.
+    - Script the dev-specific setup (maybe set up HonorPay DB)

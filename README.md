@@ -76,3 +76,5 @@ We're still working on full functionality outside our dev server.
   * Edit public_html/common.pl and find lines with the words "bypass HonorPay" as instructed.
 
   * You may find that `/usr/bin/perl` doesn't work. I do the following to use my own install from brew: `perl -p -i -e "s|/usr/bin/perl|/opt/homebrew/bin/perl|" public_html/*`
+
+  * Remember to undo those changes before committing.
